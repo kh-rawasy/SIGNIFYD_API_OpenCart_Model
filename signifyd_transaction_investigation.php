@@ -181,7 +181,7 @@ class ModelPaymentSignifydTransactionInvestigation extends Model {
 
         curl_setopt($curl, CURLOPT_URL, $url);    
         curl_setopt($curl, CURLOPT_HEADER, true);
-        curl_setopt($curl, CURLOPT_HTTPHEADER, 'Content-Type: application/json');
+        curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
         curl_setopt($curl, CURLOPT_USERPWD, $this->signifyd_trans_key . ":");
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);   // Use 1 for curl_exec() to return the response header + content. DO NOT USE true boolean, it will not work.
